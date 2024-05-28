@@ -12,8 +12,8 @@ export default function Garderobe() {
         <div className='lg:flex hidden w-full bg-primary mt-10 shadow '>
             <ul className='flex bg-primary w-full text-TextSecondary text-opacity-90 text-xl'>
              {category.map((item, i) => (
-                  <div className='flex w-full p-2 justify-center border-r border-r-Border items-center hover:bg-primaryshadow cursor-pointer hover:border-b-secondary hover:border-b-4' key={i}>
-                     <li className='flex w-1/6 items-center  hover:cursor-pointer border-r-Border justify-center '>{item.category}</li>
+                  <div className='flex w-full p-2 justify-center border-r border-r-background items-center hover:bg-primaryshadow cursor-pointer hover:border-b-background hover:border-b-4' key={i}>
+                     <li className='flex w-1/6 items-center  hover:cursor-pointer border-r-background justify-center '>{item.category}</li>
                   </div>
                 ))}
             </ul>
