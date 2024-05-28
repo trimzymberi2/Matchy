@@ -9,7 +9,9 @@ module.exports = {
       primaryshadow: '#F98866',
       background: '#fde0d7',
       backgroundSecondary: '#f3f3f3',
-      
+      TextSecondary: '#EAEAEA',
+      Border: '#827070',
+
     },
     fontFamily: {
       Poppins: ['Poppins', 'sans-serif'],
