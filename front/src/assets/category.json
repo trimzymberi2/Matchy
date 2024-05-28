@@ -1,20 +1,28 @@
 [
     {
-        "category": "SHIRT'S"
+        "category": "SHIRT'S",
+        "icon": "../assets/images/icon shirt.png"
+        
     },
     {
-        "category": "PANT'S"
+        "category": "PANT'S",
+        "icon": "../assets/images/pants.png"
+
     },
     {
-        "category": "SHOE'S"
+        "category": "SHOE'S",
+        "icon": "../assets/images/shoes-icon.png"
     },
     {
-        "category": "SHADES'S"
+        "category": "SHADES'S",
+        "icon": "../assets/images/icons8-shades-16.png"
     },
     {
-        "category": "WATCHES'S"
+        "category": "WATCHES'S",
+        "icon": "../assets/images/icons8-watch-16.png"
     },
     {
-        "category": "BAG'S"
+        "category": "BAG'S",
+        "icon": "../assets/images/icons8-bag-16.png"
     }
 ]
