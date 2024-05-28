@@ -4,6 +4,7 @@ import category from '../assets/category.json'
 import down from '../assets/images/down.png'
 import up from '../assets/images/up arrow.png'
 import shirt from '../assets/images/icon shirt.png'
+import GarderobeCard from './GarderobeCard'
 
 export default function Garderobe() {
   const [isOpen, setIsOpen] =useState(false);
@@ -46,7 +47,7 @@ export default function Garderobe() {
             </button>
 
             {isOpen && (
-              <div className='lg:hidden bg-primary absolute top-28 flex flex-col items-start rounded-lg p-2 w-full'>
+              <div className='lg:hidden bg-primary absolute z-10 top-28 flex flex-col items-start rounded-lg p-2 w-full'>
                 {category.map((item, i) => (
                   <div className='flex w-full p-4 justify-between hover:bg-primaryshadow cursor-pointer rounded-r-lg border-l-transparent hover:border-l-white hover:border-l-4' 
                   onClick={() => {
@@ -61,34 +62,42 @@ export default function Garderobe() {
             )}
 
         </div>
-        <div className='flex flex-col mt-14 gap-5 items-center justify-center'>
-              <h3 className='text-xl sm:text-3xl flex gap-2 text-secondary'>Upload your outfit's image <img src={Image} alt="" className='sm:w-8 sm:h-8 w-7 h-7 shadow'/></h3>
-              <input type="file" className='border border-Border rounded-lg w-72  text-TextSecondary bg-primary'/>
-        </div>
-          <div className={toggle === 0 ? "flex" : "hidden"}>
-                <h1>shirts</h1>
-          </div>
-          
-          <div className={toggle === 1 ? "flex" : "hidden"}>
-                <h1>PANT</h1>
-          </div>
-          
-          <div className={toggle === 2 ? "flex" : "hidden"}>
-                <h1>SHOE</h1>
-          </div>
-          
-          <div className={toggle === 3 ? "flex" : "hidden"}>
-                <h1>SHADES</h1>
-          </div>
-          
-          <div className={toggle === 4 ? "flex" : "hidden"}>
-                <h1>WATCHES</h1>
-          </div>
-          
-          <div className={toggle === 5 ? "flex" : "hidden"}>
-                <h1>BAG</h1>
-          </div>
 
+        <main class="flex mt-16 items-center justify-center bg-gray-100 font-sans">
+          <label for="dropzone-file" class="mx-auto cursor-pointer flex w-full max-w-lg flex-col items-center rounded-xl border-2 border-dashed border-secondary bg-white p-6 text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+          </svg>            <h2 class="mt-4 text-sm font-medium text-secondary tracking-wide">UPLOAD YOUR {textInsideDiv} IMAGE HERE</h2>
+            <input id="dropzone-file" type="file" class="hidden" />
+          </label>
+        </main>
+          
+          <div className='mt-16 w-full relative'>
+              <div className={toggle === 0 ? " w-full " : "hidden"}>
+                    <GarderobeCard/>
+              </div>
+              
+              <div className={toggle === 1 ? "flex" : "hidden"}>
+                    <h1>PANT</h1>
+              </div>
+              
+              <div className={toggle === 2 ? "flex" : "hidden"}>
+                    <h1>SHOE</h1>
+              </div>
+              
+              <div className={toggle === 3 ? "flex" : "hidden"}>
+                    <h1>SHADES</h1>
+              </div>
+              
+              <div className={toggle === 4 ? "flex" : "hidden"}>
+                    <h1>WATCHES</h1>
+              </div>
+              
+              <div className={toggle === 5 ? "flex" : "hidden"}>
+                    <h1>BAG</h1>
+              </div>
+          </div>
+  
     </div>
   )
 }

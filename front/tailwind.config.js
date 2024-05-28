@@ -11,6 +11,7 @@ module.exports = {
       backgroundSecondary: '#f3f3f3',
       TextSecondary: '#EAEAEA',
       Border: '#827070',
+      SecondaryBorder: '#60a5fa',
 
     },
     fontFamily: {
