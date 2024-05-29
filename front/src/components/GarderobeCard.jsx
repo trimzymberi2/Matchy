@@ -1,6 +1,9 @@
 import React from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import category from '../assets/category.json'
+import image from '../assets/images/3.png'
+
 
 export default function GarderobeCard() {
     const responsive = {
@@ -11,24 +14,27 @@ export default function GarderobeCard() {
         },
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
-          items: 3
+          items: 4
         },
         tablet: {
-          breakpoint: { max: 1024, min: 464 },
+          breakpoint: { max: 1024, min: 768 },
           items: 2
         },
         mobile: {
-          breakpoint: { max: 464, min: 0 },
+          breakpoint: { max: 768, min: 0 },
           items: 1
         }
       };
   return (
     <div className=''>
             <Carousel responsive={responsive}>
-                <div className=' h-40 w-44 bg-primary border border-r-secondary'>Item 1</div>
-                <div className=' h-40 w-44 bg-primary border border-r-secondary'>Item 2</div>
-                <div className=' h-40 w-44 bg-primary border border-r-secondary'>Item 3</div>
-                <div className=' h-40 w-44 bg-primary border border-r-secondary'>Item 4</div>
+                    {category.map((item) => 
+                        <div className='flex items-center justify-center'>
+                          <div className='w-72 h-72 flex items-center justify-center'>
+                            <img src={image} alt="" />
+                          </div>
+                        </div>
+                    )}
             </Carousel>
     </div>
   )

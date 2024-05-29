@@ -33,7 +33,7 @@ export default function Garderobe() {
                 ))}
             </ul>
         </div>
-        <div className='relative flex flex-col items-center w-[340px] h-[340-px] rounded-lg'>
+        <div className='relative flex flex-col items-center w-[240px] sm:w-[340px] sm:h-[340-px] rounded-lg'>
             <button 
             onClick={() =>setIsOpen((prev) => !prev)}
             className='lg:hidden bg-primary mt-10 p-4 w-full flex items-center justify-center text-lg tracking-wider border rounded-lg text-TextSecondary font border-Border active:border-white duration-300 active:text-white'>
@@ -72,7 +72,7 @@ export default function Garderobe() {
           </label>
         </main>
           
-          <div className='mt-16 w-full relative'>
+          <div className='mt-16 z-0 w-full relative'>
               <div className={toggle === 0 ? " w-full " : "hidden"}>
                     <GarderobeCard/>
               </div>
